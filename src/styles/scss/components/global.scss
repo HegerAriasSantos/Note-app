@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+$fontColor: #dcdcdc;
+$background: #202124;
+$border: #5f6368;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+@mixin responsive($size) {
+  $screen_sizes: (
+    phone: "(max-width: 600px)",
+    tablet: "(max-width: 800px)",
+    small: "(max-width: 900px)",
+    medium: "(max-width: 1250px)",
+    large: "(max-width: 1600px)",
+  );
+
+  $query_value: map-get($screen_sizes, $size);
+
+  @media #{$query_value} {
+    @content;
+  }
+}

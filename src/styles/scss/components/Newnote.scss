@@ -1,0 +1,69 @@
+@import "global";
+
+.Form {
+  justify-self: center;
+  width: 40vw;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: 0.1rem solid $border;
+  border-radius: 1rem;
+  text-align: center;
+  &__section {
+    .input {
+      width: 100%;
+      resize: none;
+      min-height: 3rem;
+      border: none;
+      padding: 1rem;
+      outline: none;
+      background: transparent;
+      color: white;
+      transition: 400ms;
+    }
+  }
+  &__section-title .input {
+    font-size: 1.4rem;
+  }
+  &__section-description .input {
+    font-size: 0.9rem;
+  }
+  &__section--icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      font-size: 1.4rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+  }
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      align-items: center;
+      font-size: 1rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
+.DeleteAll {
+  text-align: center;
+  align-items: center;
+  font-size: 1.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+@include responsive(phone) {
+  .Form {
+    width: 60vw;
+  }
+}

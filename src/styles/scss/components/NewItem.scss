@@ -1,0 +1,157 @@
+@import "./global.scss";
+
+.Note {
+  border: 0.1rem $border solid;
+  border-radius: 0.7rem;
+  height: auto;
+  width: 100%;
+  &__title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+  }
+  &__description {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 1rem;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 0.1rem $border solid;
+    transition: 400ms;
+    .button-delete {
+      display: flex;
+      width: 2.2rem;
+      height: 2.2rem;
+      margin: 10px;
+      filter: invert(50%);
+    }
+    .button-modify {
+      display: flex;
+      width: 2.2rem;
+      height: 2.2rem;
+      filter: invert(50%);
+    }
+  }
+}
+li {
+  list-style: none;
+}
+
+.Edit {
+  color: white;
+  &__title {
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0 2rem;
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+  }
+  &__description {
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    text-align: justify;
+    margin: 1rem 1rem 0 2rem;
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    &-b {
+      align-items: center;
+      font-size: 1.2rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
+
+@include responsive(small) {
+  Note {
+    border: 0.1rem $border solid;
+    border-radius: 0.7rem;
+    height: auto;
+
+    &__title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 1rem;
+    }
+    &__description {
+      font-size: 1rem;
+      text-align: justify;
+      margin: 1rem;
+    }
+    &__buttons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 0.1rem $border solid;
+      transition: 400ms;
+      .button-delete {
+        display: flex;
+        width: 2.2rem;
+        height: 2.2rem;
+        margin: 10px;
+        filter: invert(50%);
+      }
+      .button-modify {
+        display: flex;
+        width: 2.2rem;
+        height: 2.2rem;
+        filter: invert(50%);
+      }
+    }
+  }
+  li {
+    list-style: none;
+  }
+
+  .Edit {
+    color: white;
+    &__title {
+      width: 100%;
+      color: white;
+      font-size: 1.5rem;
+      margin: 1rem 1rem 0 2rem;
+      background: transparent;
+      border: none;
+      resize: none;
+      outline: none;
+    }
+    &__description {
+      color: white;
+      width: 100%;
+      font-size: 1rem;
+      text-align: justify;
+      margin: 1rem 1rem 0 2rem;
+      background: transparent;
+      border: none;
+      resize: none;
+      outline: none;
+    }
+    &__btn {
+      display: flex;
+      justify-content: center;
+      &-b {
+        align-items: center;
+        font-size: 1.2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}

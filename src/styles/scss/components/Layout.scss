@@ -1,0 +1,110 @@
+@import "./global.scss";
+
+.Layout {
+  background-color: $background;
+  color: $fontColor;
+  min-height: 101vh;
+  &__body {
+    display: grid;
+    justify-content: stretch;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  border-bottom: 0.1rem $border solid;
+  margin-bottom: 2rem;
+  &__name {
+    display: flex;
+    justify-content: space-around;
+    color: $fontColor;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    img {
+      width: 3rem;
+      margin-right: 1rem;
+    }
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    input {
+      width: 50vw;
+      height: 3rem;
+      border-radius: 0.5rem;
+      border: 0.1rem $border solid;
+      padding: 1rem;
+      font-size: 1rem;
+      outline: none;
+      background: $border;
+      color: white;
+      transition: 400ms;
+      &:focus {
+        background-color: white;
+        color: black;
+        &::placeholder {
+          color: black;
+        }
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+  &__made {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    color: $fontColor;
+    strong {
+      color: white;
+    }
+  }
+}
+
+@include responsive(small) {
+  .Header {
+    &__name {
+      font-size: 1rem;
+      margin-left: 0.5rem;
+    }
+    &__search {
+      input {
+        width: 40vw;
+      }
+    }
+    &__made {
+      margin-right: 0.6rem;
+      font-size: 0.7rem;
+    }
+  }
+}
+@include responsive(phone) {
+  .Header {
+    &__name {
+      font-size: 0rem;
+      img {
+        width: 3rem;
+      }
+    }
+    &__search {
+      input {
+        width: 55vw;
+      }
+    }
+    &__made {
+      margin: 0 0.6rem 0 0.9rem;
+      font-size: 0.6rem;
+    }
+  }
+}
