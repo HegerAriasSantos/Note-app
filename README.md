@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # Note-app
 
 A simple Note-app Made for practicing concepts such as:
@@ -33,4 +32,4 @@ A simple Note-app Made for practicing concepts such as:
 	$ npm dev
 ```
 
->>>>>>> 3e26e86774d8b03ed7d9d688cd76b15561e33a9e
+
