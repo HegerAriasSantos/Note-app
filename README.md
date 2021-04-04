@@ -8,7 +8,6 @@ A simple Note-app Made for practicing concepts such as:
 - CRUD.
 - Sass.
 
-[Check the game rules.](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 ## Start the Project
 
